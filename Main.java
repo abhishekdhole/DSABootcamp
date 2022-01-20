@@ -5,34 +5,14 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        Scanner in =new Scanner(System.in);
-        /*
-        Syntax of if statements:
-            if(boolean expression T or F) {
-                 //body
-            } else{
-                 //do this
-            }
-         */
+	// Q: take input of 2 number and print the sum
+        Scanner in = new Scanner(System.in);
 
-        int salary =10000;
-//        if(salary > 4000){
-//            salary =salary +2000;
-//
-//        } else{
-//            salary =salary+1000;
-//        }
-
-        // multiple if -else
-        if(salary>10000){
-            salary +=2000; //salary =salary +2000
-        }else if(salary >20000){
-            salary += 3000;
-        }else{
-            salary +=1000;
-        }
-        System.out.println(salary);
-
-
+        System.out.println("Enter number 1: ");
+        int num1 =in.nextInt();
+        System.out.println("Enter number 2 :");
+        int num2 =in.nextInt();
+        int sum =num1+num2;
+        System.out.println("The sum : "+sum);
     }
 }

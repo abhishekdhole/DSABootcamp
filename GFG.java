@@ -1,32 +1,29 @@
-/ Java Program to Check if Given Integer is Odd or Even
-// Using Brute Forcew Approach
- 
-// Importing required classes
-import java.io.*;
-import java.util.Scanner;
- 
-// Main class
+// A school method based JAVA program
+// to check if a number is prime
 class GFG {
- 
-    // Main Driver Method
-    public static void main(String[] args)
-    {
-        // Declaring and initializing integer variable
-        int num = 10;
- 
-        // Checking if number is even or odd number
-        // via remainder
-        if (num % 2 == 0) {
- 
-            // If remainder is zero then this number is even
-            System.out.println("Entered Number is Even");
-        }
- 
-        else {
- 
-            // If remainder is not zero then this number is
-            // odd
-            System.out.println("Entered Number is Odd");
-        }
-    }
+
+	static boolean isPrime(int n) {
+		// Corner case
+		if (n <= 1)
+			return false;
+
+		// Check from 2 to n-1
+		for (int i = 2; i < n; i++)
+			if (n % i == 0)
+				return false;
+
+		return true;
+	}
+
+	// Driver Program
+	public static void main(String args[]) {
+		if (isPrime(11))
+			System.out.println(" true");
+		else
+			System.out.println(" false");
+		if (isPrime(15))
+			System.out.println(" true");
+		else
+			System.out.println(" false");
+	}
 }
